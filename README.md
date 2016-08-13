@@ -12,5 +12,6 @@ Sample UWP project in C# for Windows 10 to test Direct Line calls to The Maker S
 - Open **BotService.cs** and paste your Direct Line secret in the **_APIKEY** private string
 
 ## Follow Me
-- Twitter: [@ActiveNick](http://twitter.com/ActiveNick)
-- Blog: [AgeofMobility.com](http://AgeofMobility.com)
+* Twitter: [@ActiveNick](http://twitter.com/ActiveNick)
+* Blog: [AgeofMobility.com](http://AgeofMobility.com)
+* SlideShare: [http://www.slideshare.net/ActiveNick](http://www.slideshare.net/ActiveNick)
