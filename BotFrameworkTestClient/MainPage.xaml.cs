@@ -13,16 +13,16 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace MakerShowBotTestClient
+namespace BotFrameworkTestClient
 {
     /// <summary>
     /// This sample app to test Direct Line calls to communicate with any bot created 
     /// with the Microsoft Bot Framework.
-    /// Note that this code currently only supports the Direct Line 1.1 API.
+    /// This code was updated to support the Direct Line 3.0 API.
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        BotService tmsBot;
+        BotService myBot;
         string ConversationId;
 
         public MainPage()
@@ -33,7 +33,7 @@ namespace MakerShowBotTestClient
             // Replace this with your own secret or paste it in the textbox at runtime.
             txtSecret.Text = "PN3lBLvTXwU.cwA.Kb8.qA6OkFZcgx2hLRSAlteqKnCZqYcQD_orUi_kwyw6i8k";
 
-            tmsBot = new BotService();            
+            myBot = new BotService();            
         }
 
         private async void btnAsk_Click(object sender, RoutedEventArgs e)
@@ -41,12 +41,12 @@ namespace MakerShowBotTestClient
 
             string msg = txtInput.Text;
 
-            if (await tmsBot.SendMessage(msg))
+            if (await myBot.SendMessage(msg))
             {
-                ConversationMessages messages = await tmsBot.GetMessages();
-                for (int i = 1; i < messages.messages.Length; i++)
+                ConversationActitvities messages = await myBot.GetMessages();
+                for (int i = 1; i < messages.activities.Length; i++)
                 {
-                    lblMessage.Text += messages.messages[i].text + Environment.NewLine;
+                    lblMessage.Text += messages.activities[i].text + Environment.NewLine;
                 }
             }
         }
@@ -58,7 +58,7 @@ namespace MakerShowBotTestClient
 
         private async void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            ConversationId = await tmsBot.StartConversation(txtSecret.Text);
+            ConversationId = await myBot.StartConversation(txtSecret.Text);
             btnStart.IsEnabled = false;
             btnAsk.IsEnabled = true;
         }

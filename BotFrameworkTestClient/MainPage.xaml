@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="MakerShowBotTestClient.MainPage"
+    x:Class="BotFrameworkTestClient.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:MakerShowBotTestClient"
+    xmlns:local="using:BotFrameworkTestClient"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -13,7 +13,7 @@
             <TextBlock Text="Direct Line Test Client for UWP" Style="{ThemeResource TitleTextBlockStyle}" />
             <TextBlock Text="Enter your Direct Line API Key/Secret below" Margin="0,12,0,0" />
             <TextBox x:Name="txtSecret" Margin="0,12,0,0"/>
-            <TextBlock Text="Ask a question to your bot using the input box below (only supports Direct Line 1.1 for now)" Margin="0,12,0,0" />
+            <TextBlock Text="Ask a question to your bot using the input box below (supports Direct Line 3.0)" Margin="0,12,0,0" />
             <TextBox x:Name="txtInput" Margin="0,12,0,0"/>
             <StackPanel Margin="0,12,0,12" Orientation="Horizontal">
                 <Button x:Name="btnAsk" Content="Ask" Margin="0,0,0,0" Width="100" IsEnabled="False" Click="btnAsk_Click"/>

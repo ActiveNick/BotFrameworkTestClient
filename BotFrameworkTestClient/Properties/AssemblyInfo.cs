@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MakerShowBotTestClient")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("BotFrameworkTestClient")]
+[assembly: AssemblyDescription("Microsoft Bot Framework Direct Line Test Client for Windows 10")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MakerShowBotTestClient")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCompany("Mobility42 LLC")]
+[assembly: AssemblyProduct("BotFrameworkTestClient")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

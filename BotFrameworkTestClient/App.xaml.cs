@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace MakerShowBotTestClient
+namespace BotFrameworkTestClient
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -42,7 +42,7 @@ namespace MakerShowBotTestClient
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                this.DebugSettings.EnableFrameRateCounter = false;
             }
 #endif
             Frame rootFrame = Window.Current.Content as Frame;

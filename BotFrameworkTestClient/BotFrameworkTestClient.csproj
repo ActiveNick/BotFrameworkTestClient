@@ -7,8 +7,8 @@
     <ProjectGuid>{3821BC68-DC63-4733-90E0-5160DA9783D9}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MakerShowBotTestClient</RootNamespace>
-    <AssemblyName>MakerShowBotTestClient</AssemblyName>
+    <RootNamespace>BotFrameworkTestClient</RootNamespace>
+    <AssemblyName>BotFrameworkTestClient</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
@@ -105,7 +105,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="MakerShowBotTestClient_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
