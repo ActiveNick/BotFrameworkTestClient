@@ -53,7 +53,7 @@ namespace MakerShowBotTestClient
     public class BotService
     {
 
-        private string _APIKEY = "PN3lBLvTXwU.cwA.Kb8.qA6OkFZcgx2hLRSAlteqKnCZqYcQD_orUi_kwyw6i8k";
+        private string APIKEY;
         private string botToken;
         private string activeConversation;
         private string activeWatermark;
@@ -63,8 +63,10 @@ namespace MakerShowBotTestClient
 
         }
 
-        public async Task<string> StartConversation()
+        public async Task<string> StartConversation(string secret)
         {
+            APIKEY = secret;
+
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://directline.botframework.com/");
@@ -72,7 +74,7 @@ namespace MakerShowBotTestClient
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // Authorize
-                client.DefaultRequestHeaders.Add("Authorization", "BotConnector " + _APIKEY);
+                client.DefaultRequestHeaders.Add("Authorization", "BotConnector " + APIKEY);
 
                 // Get a new token
                 var keyreq = new KeyRequest() { Mainkey = "" };
@@ -112,7 +114,7 @@ namespace MakerShowBotTestClient
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // Authorize
-                client.DefaultRequestHeaders.Add("Authorization", "BotConnector " + _APIKEY);
+                client.DefaultRequestHeaders.Add("Authorization", "BotConnector " + APIKEY);
 
                 // Send a message
                 string messageId = Guid.NewGuid().ToString();
@@ -120,7 +122,7 @@ namespace MakerShowBotTestClient
                 var attachment = new Attachment();
                 var myMessage = new Message()
                 {
-                    from = "Joe",
+                    from = "Nick",
                     conversationId = conversationId,
                     text = message
                 };
@@ -148,7 +150,7 @@ namespace MakerShowBotTestClient
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // Authorize
-                client.DefaultRequestHeaders.Add("Authorization", "BotConnector " + _APIKEY);
+                client.DefaultRequestHeaders.Add("Authorization", "BotConnector " + APIKEY);
 
                 ConversationMessages cm = new ConversationMessages();
                 string messageURL = "api/conversations/" + conversationId + "/messages";

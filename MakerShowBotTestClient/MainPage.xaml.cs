@@ -13,12 +13,12 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace MakerShowBotTestClient
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// This sample app to test Direct Line calls to communicate with any bot created 
+    /// with the Microsoft Bot Framework.
+    /// Note that this code currently only supports the Direct Line 1.1 API.
     /// </summary>
     public sealed partial class MainPage : Page
     {
@@ -28,6 +28,10 @@ namespace MakerShowBotTestClient
         public MainPage()
         {
             this.InitializeComponent();
+
+            // This is the Direct Line secret to communicate with Nick Landry's Maker Show Bot.
+            // Replace this with your own secret or paste it in the textbox at runtime.
+            txtSecret.Text = "PN3lBLvTXwU.cwA.Kb8.qA6OkFZcgx2hLRSAlteqKnCZqYcQD_orUi_kwyw6i8k";
 
             tmsBot = new BotService();            
         }
@@ -54,7 +58,7 @@ namespace MakerShowBotTestClient
 
         private async void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            ConversationId = await tmsBot.StartConversation();
+            ConversationId = await tmsBot.StartConversation(txtSecret.Text);
             btnStart.IsEnabled = false;
             btnAsk.IsEnabled = true;
         }
