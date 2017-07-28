@@ -11,9 +11,9 @@
         <StackPanel Margin="12">
             <TextBlock Text="Microsoft Bot Framework" Style="{ThemeResource HeaderTextBlockStyle}"/>
             <TextBlock Text="Direct Line Test Client for UWP" Style="{ThemeResource TitleTextBlockStyle}" />
-            <TextBlock Text="Enter your Direct Line API Key/Secret below" Margin="0,12,0,0" />
+            <TextBlock Text="Enter your Direct Line API Key/Secret below and press the 'Start' button to begin" Margin="0,12,0,0" TextWrapping="Wrap"/>
             <TextBox x:Name="txtSecret" Margin="0,12,0,0"/>
-            <TextBlock Text="Ask a question to your bot using the input box below (supports Direct Line 3.0)" Margin="0,12,0,0" />
+            <TextBlock Text="Ask a question to your bot using the input box below (supports Direct Line 3.0)" Margin="0,12,0,0" TextWrapping="Wrap"/>
             <TextBox x:Name="txtInput" Margin="0,12,0,0"/>
             <StackPanel Margin="0,12,0,12" Orientation="Horizontal">
                 <Button x:Name="btnAsk" Content="Ask" Margin="0,0,0,0" Width="100" IsEnabled="False" Click="btnAsk_Click"/>

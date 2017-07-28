@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Media.SpeechSynthesis;
 
 namespace BotFrameworkTestClient
 {
@@ -40,6 +41,7 @@ namespace BotFrameworkTestClient
         {
 
             string msg = txtInput.Text;
+            string spokenresult = "";
 
             if (await myBot.SendMessage(msg))
             {
@@ -47,7 +49,9 @@ namespace BotFrameworkTestClient
                 for (int i = 1; i < messages.activities.Length; i++)
                 {
                     lblMessage.Text += messages.activities[i].text + Environment.NewLine;
+                    spokenresult += (messages.activities[i].speak + " ");
                 }
+                ReadText(spokenresult);
             }
         }
 
@@ -62,5 +66,33 @@ namespace BotFrameworkTestClient
             btnStart.IsEnabled = false;
             btnAsk.IsEnabled = true;
         }
+
+        // Quickly adds Text-to-Speech to the app using Cortana's default voice
+        private async void ReadText(string mytext)
+        {
+            //Reminder: You need to enable the Microphone capabilitiy in Windows Phone projects
+            //Reminder: Add this namespace in your using statements
+            //using Windows.Media.SpeechSynthesis;
+
+            // The media object for controlling and playing audio.
+            MediaElement mediaplayer = new MediaElement();
+
+            // The object for controlling the speech synthesis engine (voice).
+            using (var speech = new SpeechSynthesizer())
+            {
+                //Retrieve the first female voice
+                speech.Voice = SpeechSynthesizer.AllVoices
+                    .First(i => (i.Gender == VoiceGender.Female && i.Description.Contains("United States")));
+                // Generate the audio stream from plain text.
+                SpeechSynthesisStream stream = await speech.SynthesizeTextToStreamAsync(mytext);
+
+                // Send the stream to the media object.
+                mediaplayer.SetSource(stream, stream.ContentType);
+                mediaplayer.Play();
+            }
+        }
+
     }
+
+
 }

@@ -16,6 +16,13 @@ namespace BotFrameworkTestClient
         public string expires_in { get; set; }
     }
 
+    public class ConversationAccount
+    {
+        public string id { get; set; }
+        public bool isGroup { get; set; }
+        public string name { get; set; }
+    }
+
     public class ConversationReference
     {
         public string id { get; set; }
@@ -28,7 +35,7 @@ namespace BotFrameworkTestClient
         public string eTag { get; set; }
     }
 
-    public class UserId
+    public class UserAccount
     {
         public string id { get; set; }
         public string name { get; set; }
@@ -39,27 +46,24 @@ namespace BotFrameworkTestClient
         public string id { get; set; }
     }
 
-    public class ActivityMessage
+    public class Activity
     {
         public string type { get; set; }
-        public UserId from { get; set; }
-        public string text { get; set; }
-    }
-
-    public class Activity : ActivityMessage
-    {
         public string id { get; set; }
-        public DateTime timestamp { get; set; }
-        public ConversationReference conversation { get; set; }
-
+        public string timestamp { get; set; }
         public string channelId { get; set; }
-        public string replyToId { get; set; }
-        public DateTime created { get; set; }
-        public Channeldata channelData { get; set; }
-        public string[] images { get; set; }
+        public UserAccount from { get; set; }
+        public ConversationAccount conversation { get; set; }
+        public string text { get; set; }
+        public string localTimestamp { get; set; }
+        public UserAccount[] membersAdded { get; set; }
+        public UserAccount[] membersRemoved { get; set; }
+        public string speak { get; set; }
         public Attachment[] attachments { get; set; }
-        public string eTag { get; set; }
+        public object[] entities { get; set; }
+        public string replyToId { get; set; }
     }
+
 
     public class Channeldata
     {
@@ -138,10 +142,10 @@ namespace BotFrameworkTestClient
                 string messageId = Guid.NewGuid().ToString();
                 DateTime timeStamp = DateTime.Now;
                 var attachment = new Attachment();
-                var myMessage = new ActivityMessage()
+                var myMessage = new Activity()
                 {
                     type = "message",
-                    from = new UserId() { id = "Joe" },
+                    from = new UserAccount() { id = "Windows 10 User" },
                     text = message
                 };
 

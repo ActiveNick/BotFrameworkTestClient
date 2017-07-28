@@ -1,0 +1,39 @@
+{
+    "activities": [
+        {
+            "type": "message",
+            "id": "DOPX4TaC3522evAo03wOnh|0000001",
+            "timestamp": "2017-07-28T19:16:42.983882Z",
+            "channelId": "directline",
+            "from": {
+                "id": "Joe"
+            },
+            "conversation": {
+                "id": "DOPX4TaC3522evAo03wOnh"
+            },
+            "text": "What can I build with an Arduino?"
+        },
+        {
+            "type": "message",
+            "id": "DOPX4TaC3522evAo03wOnh|0000002",
+            "timestamp": "2017-07-28T19:16:45.7783111Z",
+            "localTimestamp": "2017-07-28T19:16:46.2652391+00:00",
+            "channelId": "directline",
+            "from": {
+                "id": "TheMakerShowBot",
+                "name": "The Maker Show Bot"
+            },
+            "conversation": {
+                "id": "DOPX4TaC3522evAo03wOnh"
+            },
+            "membersAdded": [],
+            "membersRemoved": [],
+            "text": "Get started at http://arduino.cc. You should also watch The Maker Show Episode 1 - Blinking an LED... Now What? with Brian Sherwin.",
+            "speak": "Get started at http://arduino.cc. You should also watch The Maker Show Episode 1 - Blinking an LED... Now What? with Brian Sherwin.",
+            "attachments": [],
+            "entities": [],
+            "replyToId": "DOPX4TaC3522evAo03wOnh|0000001"
+        }
+    ],
+    "watermark": "2"
+}
