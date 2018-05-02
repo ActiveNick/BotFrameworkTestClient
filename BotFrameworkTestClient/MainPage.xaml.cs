@@ -32,7 +32,8 @@ namespace BotFrameworkTestClient
 
             // This is the Direct Line secret to communicate with Nick Landry's Maker Show Bot.
             // Replace this with your own secret or paste it in the textbox at runtime.
-            txtSecret.Text = "PN3lBLvTXwU.cwA.Kb8.qA6OkFZcgx2hLRSAlteqKnCZqYcQD_orUi_kwyw6i8k";
+            //txtSecret.Text = "PN3lBLvTXwU.cwA.Kb8.qA6OkFZcgx2hLRSAlteqKnCZqYcQD_orUi_kwyw6i8k";  //The Maker Show Bot
+            txtSecret.Text = "ijt0FKWuWsI.cwA.pRE.HCw51c3WiT480Ixfg0rXsawt2CLAbfOFxGUzDJh2A0I"; // Nick Echo Bot
 
             myBot = new BotService();            
         }
@@ -48,8 +49,8 @@ namespace BotFrameworkTestClient
                 ConversationActitvities messages = await myBot.GetMessages();
                 for (int i = 1; i < messages.activities.Length; i++)
                 {
-                    lblMessage.Text += messages.activities[i].text + Environment.NewLine;
-                    spokenresult += (messages.activities[i].speak + " ");
+                    lblMessage.Text += messages.activities[i].Text + Environment.NewLine;
+                    spokenresult += (messages.activities[i].Speak + " ");
                 }
                 ReadText(spokenresult);
             }
