@@ -96,6 +96,18 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Activity.cs" />
+    <Compile Include="Models\ActivityReference.cs" />
+    <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\CardAction.cs" />
+    <Compile Include="Models\ChannelAccount.cs" />
+    <Compile Include="Models\Conversation.cs" />
+    <Compile Include="Models\ConversationAccount.cs" />
+    <Compile Include="Models\ConversationActivities.cs" />
+    <Compile Include="Models\ConversationReference.cs" />
+    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\KeyRequestcs.cs" />
+    <Compile Include="Models\SuggestedActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +143,7 @@
       <Version>9.0.1</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

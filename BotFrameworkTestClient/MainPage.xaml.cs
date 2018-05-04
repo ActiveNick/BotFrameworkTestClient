@@ -13,13 +13,15 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Media.SpeechSynthesis;
+using BotFrameworkTestClient.Models;
 
 namespace BotFrameworkTestClient
 {
     /// <summary>
     /// This sample app to test Direct Line calls to communicate with any bot created 
-    /// with the Microsoft Bot Framework.
-    /// This code was updated to support the Direct Line 3.0 API.
+    /// with the Microsoft Bot Framework v3 or v4. Support for v4 bots is still in testing.
+    /// This code now only support the Direct Line 3.0 API.
+    /// DirectLine 1.1 is no longer being tested and may not work anymore. Consider 1.1 support to be deprecated.
     /// </summary>
     public sealed partial class MainPage : Page
     {
@@ -34,6 +36,7 @@ namespace BotFrameworkTestClient
             // Replace this with your own secret or paste it in the textbox at runtime.
             //txtSecret.Text = "PN3lBLvTXwU.cwA.Kb8.qA6OkFZcgx2hLRSAlteqKnCZqYcQD_orUi_kwyw6i8k";  //The Maker Show Bot
             txtSecret.Text = "ijt0FKWuWsI.cwA.pRE.HCw51c3WiT480Ixfg0rXsawt2CLAbfOFxGUzDJh2A0I"; // Nick Echo Bot
+            //txtSecret.Text = "JyC-jIxlb_g.cwA.UDQ.26z8y5QZFL-aSOXCXYTsEVMMxaq_OQkEW0wLXNR9-Gk"; // Inquisitive Sample Bot
 
             myBot = new BotService();            
         }
@@ -92,8 +95,5 @@ namespace BotFrameworkTestClient
                 mediaplayer.Play();
             }
         }
-
     }
-
-
 }
