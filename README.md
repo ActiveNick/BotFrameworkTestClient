@@ -1,5 +1,5 @@
-# MakerShowBotTestClient
-Sample UWP project in C# for Windows 10 to test Direct Line calls to communicate with any bot created with the [Microsoft Bot Framework](https://dev.botframework.com). Updated to support the [Direct Line API v3.0](https://docs.botframework.com/en-us/restapi/directline3/).
+# BotFrameworkTestClient
+Sample UWP project in C# for Windows 10 to test Direct Line calls to communicate with any bot created with the [Microsoft Bot Framework](https://dev.botframework.com). Updated to support the [Direct Line API v3.0](https://docs.botframework.com/en-us/restapi/directline3/). has been tested with bots running both Bot Framework v3 and v4.
 
 ## Related Projects
 - [The Maker Show Bot](https://github.com/ActiveNick/TheMakerShowBot): This bot helps you get started as a maker by recommending online resources about project ideas, where to buy hardware boards, sensors and other parts, and more. This bot also recommends specific episodes of [The Maker Show](http://themakershow.io) to watch based on your interests.
