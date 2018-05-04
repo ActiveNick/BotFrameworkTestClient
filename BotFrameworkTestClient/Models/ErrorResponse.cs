@@ -10,26 +10,25 @@ namespace DirectLine.Models
     using System.Linq;
 
     /// <summary>
-    /// Object of schema.org types
+    /// An HTTP API response
     /// </summary>
-    public partial class Entity
+    public partial class ErrorResponse
     {
         /// <summary>
-        /// Initializes a new instance of the Entity class.
+        /// Initializes a new instance of the ErrorResponse class.
         /// </summary>
-        public Entity()
+        public ErrorResponse()
         {
             CustomInit();
         }
 
         /// <summary>
-        /// Initializes a new instance of the Entity class.
+        /// Initializes a new instance of the ErrorResponse class.
         /// </summary>
-        /// <param name="type">Entity Type (typically from schema.org
-        /// types)</param>
-        public Entity(string type = default(string))
+        /// <param name="error">Error message</param>
+        public ErrorResponse(Error error = default(Error))
         {
-            Type = type;
+            Error = error;
             CustomInit();
         }
 
@@ -39,10 +38,10 @@ namespace DirectLine.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets entity Type (typically from schema.org types)
+        /// Gets or sets error message
         /// </summary>
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
+        [JsonProperty(PropertyName = "error")]
+        public Error Error { get; set; }
 
     }
 }

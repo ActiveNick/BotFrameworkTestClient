@@ -98,16 +98,37 @@
     </Compile>
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\ActivityReference.cs" />
+    <Compile Include="Models\ActivitySet.cs" />
+    <Compile Include="Models\AnimationCard.cs" />
     <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\AudioCard.cs" />
     <Compile Include="Models\CardAction.cs" />
+    <Compile Include="Models\CardImage.cs" />
     <Compile Include="Models\ChannelAccount.cs" />
     <Compile Include="Models\Conversation.cs" />
     <Compile Include="Models\ConversationAccount.cs" />
     <Compile Include="Models\ConversationActivities.cs" />
     <Compile Include="Models\ConversationReference.cs" />
     <Compile Include="Models\Entity.cs" />
-    <Compile Include="Models\KeyRequestcs.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\ErrorResponse.cs" />
+    <Compile Include="Models\Fact.cs" />
+    <Compile Include="Models\GeoCoordinates.cs" />
+    <Compile Include="Models\HeroCard.cs" />
+    <Compile Include="Models\KeyRequest.cs" />
+    <Compile Include="Models\MediaUrl.cs" />
+    <Compile Include="Models\Mention.cs" />
+    <Compile Include="Models\Place.cs" />
+    <Compile Include="Models\ReceiptCard.cs" />
+    <Compile Include="Models\ReceiptItem.cs" />
+    <Compile Include="Models\ResourceResponse.cs" />
+    <Compile Include="Models\SigninCard.cs" />
     <Compile Include="Models\SuggestedActions.cs" />
+    <Compile Include="Models\Thing.cs" />
+    <Compile Include="Models\ThumbnailCard.cs" />
+    <Compile Include="Models\ThumbnailUrl.cs" />
+    <Compile Include="Models\TokenParameters.cs" />
+    <Compile Include="Models\VideoCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

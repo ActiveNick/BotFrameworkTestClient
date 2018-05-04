@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BotFrameworkTestClient.Models
+namespace DirectLine.Models
 {
     public class ConversationActitvities
     {

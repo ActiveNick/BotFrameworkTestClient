@@ -10,26 +10,25 @@ namespace DirectLine.Models
     using System.Linq;
 
     /// <summary>
-    /// Object of schema.org types
+    /// A response containing a resource ID
     /// </summary>
-    public partial class Entity
+    public partial class ResourceResponse
     {
         /// <summary>
-        /// Initializes a new instance of the Entity class.
+        /// Initializes a new instance of the ResourceResponse class.
         /// </summary>
-        public Entity()
+        public ResourceResponse()
         {
             CustomInit();
         }
 
         /// <summary>
-        /// Initializes a new instance of the Entity class.
+        /// Initializes a new instance of the ResourceResponse class.
         /// </summary>
-        /// <param name="type">Entity Type (typically from schema.org
-        /// types)</param>
-        public Entity(string type = default(string))
+        /// <param name="id">Id of the resource</param>
+        public ResourceResponse(string id = default(string))
         {
-            Type = type;
+            Id = id;
             CustomInit();
         }
 
@@ -39,10 +38,10 @@ namespace DirectLine.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets entity Type (typically from schema.org types)
+        /// Gets or sets id of the resource
         /// </summary>
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
 
     }
 }

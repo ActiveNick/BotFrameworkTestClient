@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Media.SpeechSynthesis;
-using BotFrameworkTestClient.Models;
+using DirectLine.Models;
 
 namespace BotFrameworkTestClient
 {
@@ -34,8 +34,8 @@ namespace BotFrameworkTestClient
 
             // This is the Direct Line secret to communicate with Nick Landry's Maker Show Bot.
             // Replace this with your own secret or paste it in the textbox at runtime.
-            //txtSecret.Text = "PN3lBLvTXwU.cwA.Kb8.qA6OkFZcgx2hLRSAlteqKnCZqYcQD_orUi_kwyw6i8k";  //The Maker Show Bot
-            txtSecret.Text = "ijt0FKWuWsI.cwA.pRE.HCw51c3WiT480Ixfg0rXsawt2CLAbfOFxGUzDJh2A0I"; // Nick Echo Bot
+            txtSecret.Text = "PN3lBLvTXwU.cwA.Kb8.qA6OkFZcgx2hLRSAlteqKnCZqYcQD_orUi_kwyw6i8k";  //The Maker Show Bot
+            //txtSecret.Text = "ijt0FKWuWsI.cwA.pRE.HCw51c3WiT480Ixfg0rXsawt2CLAbfOFxGUzDJh2A0I"; // Nick Echo Bot
             //txtSecret.Text = "JyC-jIxlb_g.cwA.UDQ.26z8y5QZFL-aSOXCXYTsEVMMxaq_OQkEW0wLXNR9-Gk"; // Inquisitive Sample Bot
 
             myBot = new BotService();            

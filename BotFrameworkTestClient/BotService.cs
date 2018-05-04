@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using BotFrameworkTestClient.Models;
+using DirectLine.Models;
 
 namespace BotFrameworkTestClient
 {
@@ -45,9 +45,9 @@ namespace BotFrameworkTestClient
                 {
                     var re = response.Content.ReadAsStringAsync().Result;
                     var myConversation = JsonConvert.DeserializeObject<Conversation>(re);
-                    activeConversation = myConversation.conversationId;
-                    botToken = myConversation.token;
-                    return myConversation.conversationId;
+                    activeConversation = myConversation.ConversationId;
+                    botToken = myConversation.Token;
+                    return myConversation.ConversationId;
                 }
 
             }

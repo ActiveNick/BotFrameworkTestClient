@@ -18,7 +18,7 @@
             <StackPanel Margin="0,12,0,12" Orientation="Horizontal">
                 <Button x:Name="btnAsk" Content="Ask" Margin="0,0,0,0" Width="100" IsEnabled="False" Click="btnAsk_Click"/>
                 <Button x:Name="btnStart" Content="Start" Margin="12,0,0,0" Width="100" Click="btnStart_Click"/>
-                <Button x:Name="btnClear" Content="Clear Results" Margin="12,0,0,0" Width="100" Click="btnClear_Click"/>
+                <Button x:Name="btnClear" Content="Clear Results" Margin="12,0,0,0" Width="120" Click="btnClear_Click"/>
             </StackPanel>
             <TextBlock x:Name="lblMessage" Text="" Margin="0,12,0,0" TextWrapping="Wrap" Height="135" />
         </StackPanel>
